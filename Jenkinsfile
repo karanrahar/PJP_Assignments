@@ -4,20 +4,20 @@ pipeline {
         stage ('Maven Compile') {
             steps {
                 echo 'Project compile stage'
-		bat label : 'Compilation running', script: '''cd JavaFirstProject;mvn compile'''
+		bat label : 'Compilation running', script: '''cd JavaFirstProject & mvn compile'''
             }
         }
 
         stage ('Unit Test') {
             steps {
                 echo 'Project Testiong stage'
-		bat label:'Testing running', script: '''cd JavaFirstProject;mvn test''' 
+		bat label:'Testing running', script: '''cd JavaFirstProject & mvn test''' 
             }
 	}
 	stage ('Maven Package'){
             steps {
                 echo 'Project packaging stage'
-		bat label:'Project packaging', script: '''cd JavaFirstProject;mvn package''' 
+		bat label:'Project packaging', script: '''cd JavaFirstProject &     mvn package''' 
             }
             
         }

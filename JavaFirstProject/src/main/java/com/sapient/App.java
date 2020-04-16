@@ -1,13 +1,19 @@
 package com.sapient;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        CheckEven obj=new CheckEven();
+        System.out.println( "Check if 4 is even : " + obj.check(4));
+        System.out.println( "Check if 15 is even : " + obj.check(15));
+        System.out.println( "Check if 210 is even : " + obj.check(210));
+
+    }
+}
+
+class CheckEven {
+    public Boolean check(int n) {
+        return n % 2 == 0;
     }
 }

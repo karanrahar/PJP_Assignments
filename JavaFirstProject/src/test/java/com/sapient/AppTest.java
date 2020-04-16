@@ -1,36 +1,37 @@
 package com.sapient;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+//import junit.framework.Test;
+//import junit.framework.TestCase;
+//import junit.framework.TestSuite;
+
+import org.junit.*;
+import static org.junit.Assert.*;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
+	private CheckEven app;
+    @Before
+    public void setup()
     {
-        super( testName );
+    	app = new CheckEven();
     }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    
+    @Test
+    public void testForEven() {
+    	boolean check = app.check(4);
+    	assertTrue(check==true);
     }
-
-    /**
-     * Rigourous Test :-)
-     */
+    
+    @Test
+    public void testForOdd() {
+    	boolean check = app.check(5);
+    	assertTrue(check==false);
+    }
+    
+    @Test
     public void testApp()
     {
         assertTrue( true );

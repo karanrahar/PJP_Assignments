@@ -8,7 +8,7 @@ public class App
         System.out.println( "Check if 4 is even : " + obj.check(4));
         System.out.println( "Check if 15 is even : " + obj.check(15));
         System.out.println( "Check if 210 is even : " + obj.check(210));
-
+        System.out.println( "Check if 221 is even : " + obj.check(221));
     }
 }
 
